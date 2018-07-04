@@ -1,0 +1,46 @@
+.black
+{
+    color: black;
+}
+
+.btn-group .button:last-child {
+    border-radius: 0 6px 6px 0;
+    margin-left: -1px;
+}
+
+.btn-group .button:only-child {
+    border-radius: 6px;
+    margin-left: 0;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.bottom-right{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.navbar
+{
+    color: white;
+    text-align-all: right;
+    font-size: larger;
+}
+
+.responsive{
+    width: 1250px;
+}
+
+@media screen and (max-width: 1024px) {
+    .responsive
+    {
+        width: 100%;
+    }
+}
+
+

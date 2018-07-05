@@ -10,9 +10,10 @@
 	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
 	
 </head>
-<body>
+<body onload="initialize()">
 	<header id="header" class="transparent-navbar">
 		<div class="container">		
 			<div class="navbar-header">
@@ -32,7 +33,8 @@
 					<li><a href="movies.html">Movies</a></li>
 				    <li><a href="#">Events</a></li>
 					<li><a href="#">Sports</a></li>
-					<li><a href="blog.html">Login &nbsp; <span style="color: #dd0a37;">Sign Up</span></a></li>
+					<li><a href="#">Login &nbsp; <span style="color: #dd0a37;">Sign Up</span></a></li>
+					<li><a href="#"> <span id="city"></a></li>
 				</ul>
 			</nav>			
 		</div>		
@@ -44,7 +46,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						<div class="home-content">
+						<div class="home-content"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 							<h1>Find the latest events near you</h1>
 							<h4 class="lead">Book your tickets on the go, only with a couple of clicks.</h4>
 							<li><form>
@@ -224,5 +226,8 @@ Copyright &copy; 2018.</script> All rights reserved </span><br>
 	<script src="js/jquery.stellar.min.js"></script>
 	<script src="js/jquery.countTo.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/loc.js"></script>
+	<script src="js/locity.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </body>
 </html>

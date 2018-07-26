@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 input[type=text] {
-    width: 130px;
+    width: 170px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -35,12 +35,7 @@ input[type=text] {
     background-color: white;   
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-    width: 100%;
+    
 }
 
 h1 {

@@ -96,9 +96,9 @@ $mail->SMTPAuth = true;
 $mail->IsHTML(true);
 $mail->SMTPDebug = 0;
 
-$mail->Username = "vidhyashree1992@gmail.com";
-$mail->Password = "Vidhu@9003095662";
-$mail->SetFrom("vidhyashree1992@gmail.com");
+$mail->Username = "plextraticketing@gmail.com";
+$mail->Password = "plextra@1234";
+$mail->SetFrom("plextraticketing@gmail.com");
 $mail->AddAddress($email);
 
 $mail->Subject = "Registered with PLEXTRA";

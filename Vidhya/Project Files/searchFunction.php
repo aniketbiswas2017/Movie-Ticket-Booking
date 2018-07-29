@@ -79,7 +79,7 @@ $strUrl .= $searchParam;
 $json=file_get_contents($strUrl);
 $movieInfo=json_decode($json);
 
-if($movieInfo->Response != "False" && $movieInfo->Year == "2018"){
+if($movieInfo->Response != "False"){
 ?>
 <br/><br/>
 <div class="container">
@@ -110,13 +110,7 @@ if($movieInfo->Response != "False" && $movieInfo->Year == "2018"){
     </div>
 </div>
 
-<?php } elseif ($movieInfo->Year != "2018"){ ?>
-    <br/><br/>
-<div class="container" style="text-align: center">
-    <h2>Please enter a recent movie name!</h2>
-</div>
-    <?php
-}
+<?php }
 
 else {
     ?>

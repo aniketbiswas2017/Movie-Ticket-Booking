@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -7,7 +6,9 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
-
+    <link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
@@ -21,7 +22,7 @@
     <link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
 
 </head>
-<body>
+<body onload="initialize()">
 <header id="header" class="transparent-navbar">
     <div class="container">
         <div class="navbar-header">
@@ -49,51 +50,77 @@
 </header>
 
 <div id="home">
-    <div style="background-image:url(./img/contactus.jpg); height: 27em" data-stellar-background-ratio="0.5"></div>
+    <div class="section-bg" style="background-image:url(./img/avengers.jpg)" data-stellar-background-ratio="0.5"></div>
     <div class="home-wrapper">
         <div class="container">
-<div class="row">
-    <div class="col-md-8 col-md-offset-2">
-
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="home-content"><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <h1>Find the latest events near you</h1>
+                        <h4 class="lead">Book your tickets on the go, only with a couple of clicks.</h4>
+                        <li><form action="searchFunction.php" method="post" class="form-horizontal">
+                                <input id= "myInput" type="text" name="searchParam" data-wow-delay="0.8s" placeholder=" Search for movies, events and sports">
+                                <input type="submit" class="btn btn-danger" value="Go"/>
+                            </form></li><br><br>
+                        <!-- <a href="moviebook.html" id = "myBtn" class="main-btn">Go</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-</div>
-</div>
-</div>
+
+<?php
+
+$searchParam = $_REQUEST['searchParam'];
+$searchParam = str_replace(' ', '+', $searchParam);
+$strUrl = "http://www.omdbapi.com/?apikey=b485c4d4&t=";
+$strUrl .= $searchParam;
+$json=file_get_contents($strUrl);
+$movieInfo=json_decode($json);
+
+if($movieInfo->Response != "False"){
+?>
+<br/><br/>
 <div class="container">
-
-    <div class="col-md-6 hoverEffect">
-        <div class="topnav">
-            <a class="active" href="SupportTicket.php">Raise a Support Ticket</a>
-        </div></div>
-    <div class="col-md-6 hoverEffect">
-        <div class="topnav">
-            <a href="Contact.php">Contact Us</a>
-        </div>
+<h1 align="left"><?php echo "" . $movieInfo->Title; ?></h1>
+                        <h4 align="left" class="lead"><?php echo "" . $movieInfo->Year ."‧" . $movieInfo->Genre; ?></h4>
+                        <h4 align="left"><?php echo "" .  $movieInfo->Runtime; ?></h4>
 </div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="contact">
+                    <img width="358" height="310" src="<?php echo "".$movieInfo->Poster; ?>"/>
+                </div>
+            </div>
 
-<br/><br/><br/><br/>
-
-<div class="container">
-    <div class="container" style="display: inline-block; text-align: center; background-color: #f3f3f3">
-        <div class="col-md-6">
-            <p><span class="glyphicon glyphicon-earphone"></span> &nbsp; &nbsp; &nbsp; &nbsp;Phone Number</p>
+            <div class="col-sm-4">
+                <div class="contact">
+                    <h3><?php echo "".$movieInfo->Language; ?> (IMDB rating: <?php echo "". $movieInfo->imdbRating; ?>)</h3><div class="letterCircle">R</div>
+                    <br><p><?php echo "".$movieInfo->Plot; ?>
+                    <li><b>Director:  </b><?php echo "".$movieInfo->Director; ?></li>
+                    <li><b>Writer:  </b> <?php echo "".$movieInfo->Writer; ?>
+                    <li><b>Stars:  </b><?php echo "". $movieInfo->Actors; ?><br/>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6" style="text-align: left">
-            <a href="tel:902-412-9698">
-                902-412-9698
-            </a>
-        </div>
-    </div>
-    <div class="container" style="display: inline-block; text-align: center; background-color: #f3f3f3">
-        <div class="col-md-6">
-            <p> <span class="glyphicon glyphicon-envelope"></span>&nbsp; &nbsp; &nbsp; &nbsp; Email</p>
-        </div>
-        <div class="col-md-6" style="text-align: left">
-            <a href="mailto:plextra@gmail.com" target="_blank">plextra@gmail.com</a>
-        </div>
+        <br/><br/>
     </div>
 </div>
+
+<?php }
+
+else {
+    ?>
+    <br/><br/>
+<div class="container" style="text-align: center">
+    <h2>Please enter a valid movie name!</h2>
 </div>
+<?php
+} ?>
 </body>
 </html>
+
+

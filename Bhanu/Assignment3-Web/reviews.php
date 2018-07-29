@@ -8,7 +8,7 @@
   
     <title> Contact us</title>
    
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap_review.css" rel="stylesheet" />
     
     <link href="css/font-awesome.min.css" rel="stylesheet" />
 
@@ -16,7 +16,7 @@
      
     <link href="css/prettyPhoto.css" rel="stylesheet" />
       
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style_review.css" rel="stylesheet" />
     
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
    

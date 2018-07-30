@@ -27,16 +27,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 input[type=text] {
-    width: 380px;
+    width: 310px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    background-image: url("searchicon.png");
-    background-position: 10px 4px; 
+    background-image: url('http://www.serokh.com/wp-content/uploads/2016/07/search-icon-png-18.png');
+    background-position: 10px 10px; 
     background-color: white;   
     background-repeat: no-repeat;
-    padding: 6px 20px 12px 35px;
+    padding: 10px 20px 12px 35px;
     
 }
 

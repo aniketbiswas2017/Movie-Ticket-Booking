@@ -41,8 +41,8 @@ if(!(isset($_SESSION['check']))) {
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="movies.html">Movies</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sports.html">Sports</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Sports</a></li>
                 <li><a href="Register.php">Sign Up &nbsp;</a></li>
                 <li><a href="#"> <span id="city"></a></li>
             </ul>
@@ -76,7 +76,7 @@ if(!(isset($_SESSION['check']))) {
                                     echo $_SESSION['errorFirstName'];
                                     unset($_SESSION['errorFirstName']);
                                     unset($_SESSION['firstName']);
-                                    unset($_SESSION['check']);
+
                                 }
                                 ?></span>
                         </div>
@@ -95,7 +95,7 @@ if(!(isset($_SESSION['check']))) {
                                     echo $_SESSION['errorLastName'];
                                     unset($_SESSION['errorLastName']);
                                     unset($_SESSION['lastName']);
-                                    unset($_SESSION['check']);
+
                                 }
                                 ?></span>
                         </div>
@@ -115,7 +115,7 @@ if(!(isset($_SESSION['check']))) {
                                     echo $_SESSION['errorEmail'];
                                     unset($_SESSION['errorEmail']);
                                     unset($_SESSION['email']);
-                                    unset($_SESSION['check']);
+
                                 }
                                 ?></span>
                         </div>
@@ -133,7 +133,7 @@ if(!(isset($_SESSION['check']))) {
                                 if (!empty($_SESSION['errorPassword'])) {
                                     echo $_SESSION['errorPassword'];
                                     unset($_SESSION['errorPassword']);
-                                    unset($_SESSION['check']);
+
                                     // unset($_SESSION['errorPinCode']);
                                 }
                                 ?></span>
@@ -152,7 +152,7 @@ if(!(isset($_SESSION['check']))) {
                                 if (!empty($_SESSION['errorConfirmPassword'])) {
                                     echo $_SESSION['errorConfirmPassword'];
                                     unset($_SESSION['errorConfirmPassword']);
-                                    unset($_SESSION['check']);
+
                                     //unset($_SESSION['errorPinCode']);
                                 }
                                 ?></span>

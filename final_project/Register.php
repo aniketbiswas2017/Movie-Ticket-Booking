@@ -25,7 +25,7 @@ if(!(isset($_SESSION['check']))) {
 </head>
 <body onload="initialize()">
 <header id="header" class="navbar">
-    <div class="container">
+    <div class="container" >
         <div class="navbar-header">
             <div class="navbar-brand">
                 <a class="logo" href="index.html">
@@ -39,28 +39,26 @@ if(!(isset($_SESSION['check']))) {
         </div>
         <nav id="nav">
             <ul class="main-nav nav navbar-nav navbar-right">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="movies.html">Movies</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="Register.php">Sign Up &nbsp;</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="Login.php">Login</a></li>
                 <li><a href="#"> <span id="city"></a></li>
             </ul>
         </nav>
     </div>
 </header>
-<div class="container">
+<div class="container" style="background-image:url(./img/dunkirk.jpg)">
     <div class="row main">
         <div class="main-login main-center">
-            <h5>Sign up once and watch any of our free demos.</h5>
-
+            <h2 style="color:white;">Sign up for Plextra</h2>
             <span class="error"><?php
                 if (!empty($_SESSION['error'])) {
                     echo $_SESSION['error'];
                     unset($_SESSION['error']);
                 } ?></span>
 
-            <br/><br/>
 
             <form action="RegisterProcess.php" method="post">
 
@@ -159,17 +157,39 @@ if(!(isset($_SESSION['check']))) {
                         </div>
                     </div>
                 </div>
-
+<br>
                 <div class="form-group ">
                     <button type="submit" class="btn btn-primary btn-lg btn-block login-button" name="reg_user">Register</button>
-                </div><br>
+                </div>
 
 
             </form>
         </div>
     </div>
 </div>
-
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-push-4">
+                <div class="footer-brand">
+                    <a class="logo" href="index.html">
+                        <img class="logo-img" src="./img/logo1.png" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-push-4">
+					<div class="contact-social">
+						<a href="feedback.html">Feedback&nbsp;&nbsp;</a>
+						<a href="contactus.php">Contact Us&nbsp;&nbsp;</a>
+					</div>
+            </div>
+            <div class="col-md-4 col-md-pull-8">
+					<span class="copyright">
+Copyright &copy; 2018.</script> All rights reserved </span><br>
+                    </div>
+                    </div>
+                    </div>
+                    </footer>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

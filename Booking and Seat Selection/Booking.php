@@ -39,7 +39,8 @@ session_start();
                 <li><a href="#home">Movies</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Sports</a></li>
-                <li><a href="blog.html">Login &nbsp; <span style="color: #dd0a37;">Sign Up</span></a></li>
+                <li><a href="Login.php">Login</a></li>
+					<li><a href="Register.php">Sign Up</a></li>
             </ul>
         </nav>
     </div>

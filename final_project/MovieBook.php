@@ -36,7 +36,7 @@ session_start();
                 <li><a href="movies.html">Movies</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Sports</a></li>
-                <li><a href="blog.html">Login &nbsp; <span style="color: #dd0a37;">Sign Up</span></a></li>
+                <li><a href="Register.php">Login &nbsp; <span style="color: #dd0a37;">Sign Up</span></a></li>
             </ul>
         </nav>
     </div>
@@ -116,7 +116,6 @@ session_start();
                 <div class="contact-social">
                     <a href="feedback.html">Feedback&nbsp;&nbsp;</a>
                     <a href="contactus.php">Contact Us&nbsp;&nbsp;</a>
-                    <a href="#">About Us</a>
                 </div>
             </div>
             <div class="col-md-4 col-md-pull-8">

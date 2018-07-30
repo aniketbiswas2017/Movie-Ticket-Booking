@@ -72,7 +72,7 @@
                     </div>
                     <div class="speaker-body">
                         <div class="speaker-social">
-                            <a href="moviebook.html"><i class=""></i>View</a>
+                            <a href="moviebook.php"><i class=""></i>View</a>
                         </div>
                         <div class="speaker-content">
                             <h2>ELYSIUM</h2>
@@ -138,7 +138,6 @@
                 <div class="contact-social">
                     <a href="feedback.html">Feedback&nbsp;&nbsp;</a>
                     <a href="contactus.php">Contact Us&nbsp;&nbsp;</a>
-                    <a href="#">About Us</a>
                 </div>
             </div>
             <div class="col-md-4 col-md-pull-8">

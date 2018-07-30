@@ -1,9 +1,9 @@
 <?php
 
-    $servername = "db.cs.dal.ca";
-    $username = "boopathy";
-    $password = "B00790060";
-    $dbname = "boopathy";
+    $servername = "localhost";
+    $username = "root";
+    $password = "root";
+    $dbname = "kunal";
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 // set the PDO error mode to exception

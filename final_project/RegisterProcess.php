@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['check']=false;
 // including DB file
 include_once 'DbConfiguration.php';
 
@@ -14,6 +15,7 @@ $firstName = stripslashes($firstName);
     $email = $_REQUEST['email'];
     $userpassword = $_REQUEST['password'];
     $confirmPassword = $_REQUEST['confirmPassword'];
+    $userType = "user";
 
 
     // validation begins
@@ -68,11 +70,12 @@ if(empty($firstName) || empty($lastName) || empty($email) || empty($userpassword
         $userpassword = password_hash($userpassword, PASSWORD_BCRYPT);
 
         //$sql = "CREATE TABLE Register (firstname VARCHAR(30) NOT NULL, lastname VARCHAR(30) NOT NULL, email VARCHAR(50) NOT NULL, userpassword VARCHAR(20) NOT NULL, address VARCHAR(50), pincode VARCHAR(50))";
-        $stmt = $conn->prepare("INSERT INTO RegisterUser (firstname, lastname, email, userpassword) VALUES (:firstName, :lastName, :email, :userpassword)");
+        $stmt = $conn->prepare("INSERT INTO RegisterUser (firstname, lastname, email, userpassword, usertype) VALUES (:firstName, :lastName, :email, :userpassword, :usertype)");
         $stmt->bindParam(':firstName', $firstName);
         $stmt->bindParam(':lastName', $lastName);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':userpassword', $userpassword);
+        $stmt->bindParam(':usertype',$userType);
 
         $stmt->execute();
 
@@ -133,9 +136,10 @@ $mail->Body= $msg;
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li><a href="#home">Home</a></li>
                 <li><a href="movies.html">Movies</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="sports.html">Sports</a></li>
-                <li><a href="Register.php">Login &nbsp; <span style="color: #dd0a37;">Sign Up</span></a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="Register.php">Sign Up &nbsp;</a></li>
+                <li><a href="Login.php"><?php if(isset($_SESSION['user_session'])){ echo "Logout"; } else { echo "Login"; } ?></a></li>
                 <li><a href="#"> <span id="city"></a></li>
             </ul>
         </nav>

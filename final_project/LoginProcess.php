@@ -1,7 +1,8 @@
 <?php
 // including DB file
-include_once 'DbConfiguration.php';
 session_start();
+include_once 'DbConfiguration.php';
+
 
 // receive and format input
 $userName = trim($_REQUEST['userName']);

@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['check']=false;
 include_once 'DbConfiguration.php';
 
 $contactNumber = $_REQUEST['contactNumber'];

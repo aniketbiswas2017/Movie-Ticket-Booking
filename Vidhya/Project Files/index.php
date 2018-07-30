@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['check']=false;
+?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -43,6 +47,7 @@
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="Register.php">Sign Up &nbsp;</a></li>
+                <li><a href="Login.php"><?php if(isset($_SESSION['user_session'])){ echo "Logout"; } else { echo "Login"; } ?></a></li>
                 <li><a href="Register.php"> <span id="city"></a></li>
             </ul>
         </nav>

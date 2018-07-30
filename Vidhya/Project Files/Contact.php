@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['check']=false;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +46,7 @@
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="Register.php">Sign Up &nbsp;</a></li>
+                <li><a href="Login.php"><?php if(isset($_SESSION['user_session'])){ echo "Logout"; } else { echo "Login"; } ?></a></li>
                 <li><a href="#"> <span id="city"></a></li>
             </ul>
         </nav>
@@ -90,7 +95,7 @@
             <p> <span class="glyphicon glyphicon-envelope"></span>&nbsp; &nbsp; &nbsp; &nbsp; Email</p>
         </div>
         <div class="col-md-6" style="text-align: left">
-            <a href="mailto:plextra@gmail.com" target="_blank">plextra@gmail.com</a>
+            <a href="mailto:plextraticketing@gmail.com" target="_blank">plextra@gmail.com</a>
         </div>
     </div>
 </div>

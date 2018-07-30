@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +39,8 @@
                 <li><a href="#home">Movies</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Sports</a></li>
-                <li><a href="blog.html">Login &nbsp; <span style="color: #dd0a37;">Sign Up</span></a></li>
+                <li><a href="Login.php">Login</a></li>
+					<li><a href="Register.php">Sign Up</a></li>
             </ul>
         </nav>
     </div>
@@ -45,54 +49,95 @@
 <br><br>
 
 
-<form class="container align-content-center align-self-center">
+<form class="container align-content-center align-self-center" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
     <div class="form-group">
-        <label for="exampleFormControlInput1">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+        <label for="exampleFormControlInput1">Movie : </label>
+        <?php
+        // Echo session variables that were set on previous page
+        echo $_SESSION["ELYSIUM"] ;
+
+        ?>
     </div>
 
     <div class="form-group">
         <label for="exampleFormControlInput1">Pick date</label><br>
         <script>
             $( function() {
-                $( "#datepicker" ).datepicker({ minDate: 0, maxDate: "+7D" });
+                $( "#datepicker" ).datepicker({ minDate: 0, maxDate: "+14D" , dateFormat: 'yy-mm-dd'});
             } );
         </script>
-        <input type="text" class="form-control" id="datepicker">
+        <input type="text" name="showdate" class="form-control" id="datepicker" value="<?php echo $showdate ?>">
     </div>
+    <br>
+    <button class='btn btn-danger btn-group-toggle'> View Ticket Availability</button>
+    <br>
+    <br>
 
-    <div class="form-group">
-        <label for="exampleFormControlSelect1">Pick Theatre</label>
-    <select class="form-control">
-        <option>Scotia Cineplex - Park Lane</option>
-        <option>Scotia Cineplex - Dartmouth</option>
-        <option>Scotia Cineplex - Wolfville</option>
-        <option>Scotia Cineplex - Kitchener</option>
-        <option>Scotia Cineplex - Mic Mac Mall</option>
-    </select>
-    </div>
+    <?php
 
-    <div class="form-group">
-        <label for="exampleFormControlSelect1">Pick Movie</label>
-        <select class="form-control">
-            <option>Elisiyum</option>
-            <option>Mission Impossible</option>
-            <option>Life as we know it</option>
-            <option>Love you Zindagi</option>
-        </select>
-    </div>
 
-    <div class="form-group">
-        <label for="exampleFormControlSelect1">Pick Showtiming</label>
-        <select class="form-control" >
-            <option>9.30 AM</option>
-            <option>12.30 PM</option>
-            <option>03.30 PM</option>
-            <option>10.30 PM</option>
-        </select>
-    </div>
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $showdate = $_POST["showdate"];
+        $servername = "localhost";
+        $username = "root";
+        $password = "root";
 
-    <button class="btn btn-danger btn-group-toggle"> Submit</button>
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=kunal; port=3306", $username, $password);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $conn->prepare("SELECT theatre, showtiming, showdate FROM kunal.Movies WHERE moviename='".$_SESSION["ELYSIUM"]."' AND showdate='$showdate';");
+            $stmt->execute();
+
+            while($result = $stmt->fetch())
+            {
+                $theatre = $result[0];
+                $showtiming = $result[1];
+                $showdate = $result[2];
+
+                if($result[0] != null)
+                {
+                    echo "<div style='float: left; width: 300px;'><b>Theatre : </b>   $theatre </div>
+              <div style='float: left; width: 200px;'><b> Showtiming : </b>  $showtiming </div>
+              <div style='float: left; width: 200px;'><b> Showdate : </b> $showdate</div>
+              <a class='btn btn-danger btn-group-toggle' href='SeatSelect.php'> Select Seat</a>
+                        <br><br>";
+
+                    $theatre = $_SESSION["Theatre"] ;
+                    $showtiming = $_SESSION["Showtiming"];
+                    $showdate = $_SESSION["Showdate"];
+
+                }
+                else
+                {
+                    echo "<div> Sorry! No shows available </div>";
+                }
+
+
+
+            }
+
+        }
+        catch(PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+        $conn = null;
+
+        function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+
+    }
+
+
+
+
+    ?>
+
 
 </form>
 

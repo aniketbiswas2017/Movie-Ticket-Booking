@@ -79,7 +79,7 @@ if(empty($firstName) || empty($lastName) || empty($email) || empty($userpassword
 
         $stmt->execute();
 
-
+/*
 ini_set('max_execution_time', 300);
 
 require ("C:/Users/ramsu/Downloads/PHPMailer-master/PHPMailer-master/src/PHPMailer.php");
@@ -106,7 +106,7 @@ $mail->AddAddress($email);
 
 $mail->Subject = "Registered with PLEXTRA";
 $mail->Body= $msg;
-
+*/
 
 ?>
 

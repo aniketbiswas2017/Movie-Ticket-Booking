@@ -29,7 +29,7 @@ if(empty($userName) || empty($userPassword)) {
                 header("Location: index.php");
             } elseif (($row['email'] == $userName) && (password_verify($userPassword, $row['userpassword'])) && $row['usertype'] == "admin"){
                 $_SESSION['user_session'] = $row['firstname'];
-                header("Location: Contact.php");
+                header("Location: admin.html");
             }
             else{
                 $_SESSION['error'] = "Please enter the correct credentials";

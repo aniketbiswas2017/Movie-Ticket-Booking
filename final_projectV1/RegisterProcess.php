@@ -78,13 +78,13 @@ if(empty($firstName) || empty($lastName) || empty($email) || empty($userpassword
         $stmt->bindParam(':usertype',$userType);
 
         $stmt->execute();
-/*
+
 
 ini_set('max_execution_time', 300);
 
-require ("C:/Users/ramsu/Downloads/PHPMailer-master/PHPMailer-master/src/PHPMailer.php");
-require ("C:/Users/ramsu/Downloads/PHPMailer-master/PHPMailer-master/src/SMTP.php");
-require ("C:/Users/ramsu/Downloads/PHPMailer-master/PHPMailer-master/src/Exception.php");
+require ("PHPMailer-master/src/PHPMailer.php");
+require ("PHPMailer-master/src/SMTP.php");
+require ("PHPMailer-master/src/Exception.php");
 
 $msg = "Hi,
        Thanks for registering! Keep checking your email for offers on tickets. Enjoy the services of PLEXTRA.";
@@ -107,7 +107,7 @@ $mail->AddAddress($email);
 $mail->Subject = "Registered with PLEXTRA";
 $mail->Body= $msg;
 
-*/
+
 ?>
 
 <html lang="en">
@@ -123,7 +123,7 @@ $mail->Body= $msg;
     <div class="container">
         <div class="navbar-header">
             <div class="navbar-brand">
-                <a class="logo" href="index.html">
+                <a class="logo" href="index.php">
                     <img class="logo-img" src="./img/plextra4.png" alt="logo">
                     <img class="logo-alt-img" src="./img/plextra3.png" alt="logo">
                 </a>
@@ -135,7 +135,7 @@ $mail->Body= $msg;
         <nav id="nav">
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li><a href="#home">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
+                <li><a href="movies.php">Movies</a></li>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Sports</a></li>
                 <li><a href="Register.php">Sign Up &nbsp;</a></li>

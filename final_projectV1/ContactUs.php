@@ -18,7 +18,7 @@
     <div class="container">
         <div class="navbar-header">
             <div class="navbar-brand">
-                <a class="logo" href="index.html">
+                <a class="logo" href="index.php">
                     <img class="logo-img" src="./img/plextra4.png" alt="logo">
                     <img class="logo-alt-img" src="./img/plextra3.png" alt="logo">
                 </a>
@@ -40,7 +40,7 @@
     </div>
 </header>
 
-<div id="home">
+<div id="homeContactUs">
     <div style="background-image:url(./img/contactus.jpg); height: 27em" data-stellar-background-ratio="0.5"></div>
     <div class="home-wrapper">
         <div class="container">

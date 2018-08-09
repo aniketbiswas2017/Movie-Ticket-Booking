@@ -2,6 +2,7 @@
 session_start();
 $_SESSION['check']=false;
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -41,28 +42,28 @@ $_SESSION['check']=false;
         <nav id="nav">
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="movies.php">Movies</a></li>
-                <li><a href="events.php">Events</a></li>
-                <li><a href="sports.php">Sports</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Sports</a></li>
                 <li><a href="Register.php">Sign Up &nbsp;</a></li>
-				<li><a href="Login.php"><?php if(isset($_SESSION['user_session'])){ echo "Logout"; } else { echo "Login"; } ?></a></li>
+                <li><a href="Login.php"><?php if(isset($_SESSION['user_session'])){ echo "Logout"; } else { echo "Login"; } ?></a></li>
                 <li><a href="#"> <span id="city"></a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<div id="home">
+<div id="homeContactUs">
     <div style="background-image:url(./img/contactus.jpg); height: 27em" data-stellar-background-ratio="0.5"></div>
     <div class="home-wrapper">
         <div class="container">
-<div class="row">
-    <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
 
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-</div>
 </div>
 <div class="container">
 
@@ -74,30 +75,30 @@ $_SESSION['check']=false;
         <div class="topnav">
             <a href="Contact.php">Contact Us</a>
         </div>
-</div>
+    </div>
 
-<br/><br/><br/><br/>
+    <br/><br/><br/><br/>
 
-<div class="container">
-    <div class="container" style="display: inline-block; text-align: center; background-color: #f3f3f3">
-        <div class="col-md-6">
-            <p><span class="glyphicon glyphicon-earphone"></span> &nbsp; &nbsp; &nbsp; &nbsp;Phone Number</p>
+    <div class="container">
+        <div class="container" style="display: inline-block; text-align: center; background-color: #f3f3f3">
+            <div class="col-md-6">
+                <p><span class="glyphicon glyphicon-earphone"></span> &nbsp; &nbsp; &nbsp; &nbsp;Phone Number</p>
+            </div>
+            <div class="col-md-6" style="text-align: left">
+                <a href="tel:902-412-9698">
+                    902-412-9698
+                </a>
+            </div>
         </div>
-        <div class="col-md-6" style="text-align: left">
-            <a href="tel:902-412-9698">
-                902-412-9698
-            </a>
+        <div class="container" style="display: inline-block; text-align: center; background-color: #f3f3f3">
+            <div class="col-md-6">
+                <p> <span class="glyphicon glyphicon-envelope"></span>&nbsp; &nbsp; &nbsp; &nbsp; Email</p>
+            </div>
+            <div class="col-md-6" style="text-align: left">
+                <a href="mailto:plextraticketing@gmail.com" target="_blank">plextra@gmail.com</a>
+            </div>
         </div>
     </div>
-    <div class="container" style="display: inline-block; text-align: center; background-color: #f3f3f3">
-        <div class="col-md-6">
-            <p> <span class="glyphicon glyphicon-envelope"></span>&nbsp; &nbsp; &nbsp; &nbsp; Email</p>
-        </div>
-        <div class="col-md-6" style="text-align: left">
-            <a href="mailto:plextra@gmail.com" target="_blank">plextra@gmail.com</a>
-        </div>
-    </div>
-</div>
 </div>
 </body>
 </html>

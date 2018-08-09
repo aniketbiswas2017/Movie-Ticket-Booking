@@ -52,7 +52,7 @@ $_SESSION['check']=false;
     </div>
 </header>
 
-<div id="home">
+<div id="homeContactUs">
     <div style="background-image:url(./img/contactus.jpg); height: 27em" data-stellar-background-ratio="0.5"></div>
     <div class="home-wrapper">
         <div class="container">

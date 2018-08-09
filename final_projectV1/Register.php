@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!(isset($_SESSION['check']))) {
+if(!$_SESSION['check']) {
     $_SESSION['firstName'] = "";
     $_SESSION['lastName'] = "";
     $_SESSION['email'] = "";
@@ -185,7 +185,7 @@ if(!(isset($_SESSION['check']))) {
             </div>
             <div class="col-md-4 col-md-pull-8">
 					<span class="copyright">
-Copyright &copy; 2018.</script> All rights reserved </span><br>
+                        Copyright &copy; 2018.</script> All rights reserved </span><br>
                     </div>
                     </div>
                     </div>

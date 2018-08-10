@@ -33,9 +33,9 @@ session_start();
         <nav id="nav">
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="MovieListing.php">Movies</a></li>
-                <li><a href="EventsListing.php">Events</a></li>
-                <li><a href="#">Sports</a></li>
+                <li><a href="movies.php">Movies</a></li>
+                <li><a href="events.php.php">Events</a></li>
+                <li><a href="sports.php">Sports</a></li>
                 <li><a href="#">Login &nbsp; <span style="color: #dd0a37;">Sign Up</span></a></li>
             </ul>
         </nav>

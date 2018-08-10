@@ -137,19 +137,19 @@ $_SESSION['check']=false;
 </div>
 
 <div id="video-cta" class="section">
-    <div class="section-bg" style="background-image:url(./img/galery02.jpg)" data-stellar-background-ratio="0.5"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="cta-content text-center">
-                    <iframe width="570" height="345" src="https://www.youtube.com/embed/6obKlKQhZs8">
-                    </iframe><br><br>
-                    <h4  style="color:white;">From exhibitions to dance performances, stage shows, comedy shows, music concerts or workshops, you will get tickets online for events of all kinds at Plextra.</h4>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+		<div class="section-bg" style="background-image:url(./img/background02.jpg)" data-stellar-background-ratio="0.5"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="cta-content text-center">
+						<iframe width="570" height="345" src="https://www.youtube.com/embed/6obKlKQhZs8">
+						</iframe><br><br>
+						<h4>From exhibitions to dance performances, stage shows, comedy shows, music concerts or workshops, you will get tickets online for events of all kinds at Plextra.</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <div id="speakers" class="section">
     <div class="container">

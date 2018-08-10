@@ -23,6 +23,7 @@
 <h2 align = "center">Enter Movie Details</h2>
 <br>
 <div class="container">
+<form action="connect1.php" method="post">
   <form class="form-horizontal" action="/action_page.php">
     <div class="form-group">
       <label class="control-label col-sm-2" for="name">Movie Name:</label>
@@ -33,19 +34,19 @@
 	<div class="form-group">
       <label class="control-label col-sm-2" for="description">Description:</label>
       <div class="col-sm-9">
-        <input type="description" class="form-control" id="description" placeholder="Enter movie description" name="name">
+        <input type="description" class="form-control" id="description" placeholder="Enter movie description" name="des">
       </div>
     </div>
 	<div class="form-group">
       <label class="control-label col-sm-2" for="genre">Show Date:</label>
       <div class="col-sm-9">
-        <input class="form-control" type="date" value="2018-07-30" id="example-date-input">
+        <input class="form-control" type="date" value="2018-07-30" id="example-date-input" name="date">
       </div>
     </div>
 	<div class="form-group">
       <label class="control-label col-sm-2" for="genre">Movie genre:</label>
       <div class="col-sm-9">
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="exampleSelect1" name="genre">
       <option>Action</option>
       <option>Adventure</option>
       <option>Comedy</option>
@@ -63,7 +64,7 @@
 	<div class="form-group">
       <label class="control-label col-sm-2" for="description">Event time:</label>
       <div class="col-sm-9">
-    <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+    <input class="form-control" type="time" value="13:45:00" id="example-time-input" name ="time">
   </div>
     </div>
 
@@ -71,7 +72,7 @@
 	<label class="control-label col-sm-2" for="genre">Select Theatres:</label>
    <div class="form-group">
       <div class="col-sm-9">
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="exampleSelect1" name= "theater">
       <option>Cineplex Cinemas Park Lane</option>
       <option>KDP Kitchen Design Plus</option>
       <option>Scotiabank Theatre Halifax</option>
@@ -86,6 +87,7 @@
       </div>
     </div>
 	</div>
+  </form>
   </form>
 </div>
 

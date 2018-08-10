@@ -1,7 +1,4 @@
-<?php
-session_start();
-$_SESSION['check']=false;
-?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -33,11 +30,11 @@ $_SESSION['check']=false;
         <nav id="nav">
             <ul class="main-nav nav navbar-nav navbar-right">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="movies.php">Movies</a></li>
-                <li><a href="events.php">Events</a></li>
+                <li><a href="MovieListing.php">Movies</a></li>
+                <li><a href="EventsListing.php">Events</a></li>
                 <li><a href="#home">Sports</a></li>
-                <li><a href="Login.php"><?php if(isset($_SESSION['user_session'])){ echo "Logout"; } else { echo "Login"; } ?></a></li>
-					<li><a href="Register.php">Sign Up</a></li>
+                <li><a href="Login.php">Login</a></li>
+                <li><a href="Register.php">Sign Up</a></li>
             </ul>
         </nav>
     </div>
@@ -50,9 +47,9 @@ $_SESSION['check']=false;
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="home-content"><br><br><br><br><br><br><br>
-                        <h1 align="right">Enjoy all sports events near you</h1>                        
+                        <h1 align="right">Enjoy all sports events near you</h1>
                         <li><form>
-                            
+
                     </div>
                 </div>
             </div>
@@ -73,7 +70,14 @@ $_SESSION['check']=false;
                     </div>
                     <div class="speaker-body">
                         <div class="speaker-social">
-                            <a href="sportsbook.html"><i class=""></i>View</a>
+                            <?php
+                            // Set session variables
+                            $led = "Sports Fest";
+                            $place= "Halifax Commons";
+                            $date = "31 August 2018";
+                            echo "<a href=Sportsbook.php?led=" . urlencode($led) . "&place=" . urlencode($place). "&date=" . urlencode($date),">View</a>";
+                            ?>
+
                         </div>
                         <div class="speaker-content">
                             <h2>Sports Fest</h2>
@@ -91,18 +95,24 @@ $_SESSION['check']=false;
                     </div>
                     <div class="speaker-body">
                         <div class="speaker-social">
-                            <a href="sportsbook.html"><i class=""></i>View</a>
+                            <?php
+                            // Set session variables
+                            $led = "Athletic Event";
+                            $place= "Halifax Commons";
+                            $date = "28 August 2018";
+                            echo "<a href=Sportsbook.php?led=" . urlencode($led) . "&place=" . urlencode($place). "&date=" . urlencode($date),">View</a>";
+                            ?>
                         </div>
                         <div class="speaker-content">
                             <h2>Athletic Event</h2>
-                            <span>August 31</span>
+                            <span>Halifax Commons</span>
                         </div>
                     </div>
                 </div>
-				<form action="/movieconnect.php" method="get">
-					<button type="submit" class="btn btn-primary btn-lg btn-block" formaction="/movieconnect.php">Sports NEAR YOU</button>
-				</form>
-                
+                <form action="/movieconnect.php" method="get">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" formaction="/movieconnect.php">Sports NEAR YOU</button>
+                </form>
+
             </div>
             <div class="col-md-4 col-sm-6">
                 <div class="speaker" data-toggle="modal" data-target="#speaker-modal-1">
@@ -111,7 +121,13 @@ $_SESSION['check']=false;
                     </div>
                     <div class="speaker-body">
                         <div class="speaker-social">
-                            <a href="sportsbook.html"><i class=""></i>View</a>
+                            <?php
+                            // Set session variables
+                            $led = "UFC Fight Night";
+                            $place= "Exclusive";
+                            $date = "28 August 2018";
+                            echo "<a href=Sportsbook.php?led=" . urlencode($led) . "&place=" . urlencode($place). "&date=" . urlencode($date),">View</a>";
+                            ?>
                         </div>
                         <div class="speaker-content">
                             <h2>UFC Fight Night</h2>
@@ -130,25 +146,29 @@ $_SESSION['check']=false;
         <div class="row">
             <div class="col-md-4 col-md-push-4">
                 <div class="footer-brand">
-                    <a class="logo" href="index.php">
+                    <a class="logo" href="index.html">
                         <img class="logo-img" src="./img/logo1.png" alt="logo">
                     </a>
                 </div>
             </div>
             <div class="col-md-4 col-md-push-4">
-					<div class="contact-social">
-						<a href="feedback.php">Feedback&nbsp;&nbsp;</a>
-						<a href="contactus.php">Contact Us&nbsp;&nbsp;</a>
-					</div>
+                <div class="contact-social">
+                    <a href="feedback.html">Feedback&nbsp;&nbsp;</a>
+                    <a href="contactus.php">Contact Us&nbsp;&nbsp;</a>
+                </div>
             </div>
             <div class="col-md-4 col-md-pull-8">
-					<span class="copyright">
+                <span class="copyright"></span>
+            </div>
+        </div>
+    </div>
+</footer>
 Copyright &copy; 2018.</script> All rights reserved </span><br>
-                    </div>
-                    </div>
-                    </div>
-                    </footer>
-                    <script src="js/jquery.min.js"></script>
+                        </div>
+                        </div>
+                        </div>
+                        </footer>
+                        <script src="js/jquery.min.js"></script>
                         <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>

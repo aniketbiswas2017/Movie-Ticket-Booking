@@ -23,17 +23,17 @@
 <h2 align = "center">Monitor User Details</h2>
 <br>
 <div class="container">
-  <form class="form-horizontal" method="post" action="delete.php">
+  <form class="form-horizontal" method="post" action="connect4.php">
     <div class="form-group">
       <label class="control-label col-sm-2" for="username"> User Name:</label>
       <div class="col-sm-7">
-        <input type="name" class="form-control" id="name" placeholder="Enter user's name" name="name">
+        <input type="name" class="form-control" id="name" placeholder="Enter user's name" name="firstname">
       </div>
     </div>
 	<div class="form-group">
       <label class="control-label col-sm-2" for="email">Enter email:</label>
       <div class="col-sm-7">
-       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter user's email address">
+       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter user's email address" name ="email">
       </div>
     </div>
 <br>

@@ -23,6 +23,7 @@
 <h2 align = "center">Enter Event Details</h2>
 <br>
 <div class="container">
+<form action="connect3.php" method="post">
   <form class="form-horizontal" action="/action_page.php">
     <div class="form-group">
       <label class="control-label col-sm-2" for="name">Event Name:</label>
@@ -33,25 +34,25 @@
 	<div class="form-group">
       <label class="control-label col-sm-2" for="description">Description:</label>
       <div class="col-sm-9">
-        <input type="description" class="form-control" id="description" placeholder="Enter event description" name="name">
+        <input type="description" class="form-control" id="description" placeholder="Enter event description" name="des">
       </div>
     </div>
 	<div class="form-group">
       <label class="control-label col-sm-2" for="genre">Event Date:</label>
       <div class="col-sm-9">
-        <input class="form-control" type="date" value="2018-07-30" id="example-date-input">
+        <input class="form-control" type="date" value="2018-07-30" id="example-date-input" name="date">
       </div>
     </div>
 	<div class="form-group">
       <label class="control-label col-sm-2" for="description">Event time:</label>
       <div class="col-sm-9">
-    <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+    <input class="form-control" type="time" value="13:45:00" id="example-time-input" name="time">
   </div>
     </div>
 	<div class="form-group">
       <label class="control-label col-sm-2" for="genre">Event type:</label>
       <div class="col-sm-9">
-        <select class="form-control" id="exampleSelect1">
+        <select class="form-control" id="exampleSelect1" name="genre">
       <option>Racing</option>
       <option>Hockey</option>
       <option>Soccer</option>
@@ -65,15 +66,10 @@
 	<div class="form-group">
       <label class="control-label col-sm-2" for="name">Location:</label>
       <div class="col-sm-9">
-        <input type="name" class="form-control" id="name" placeholder="Enter event location" name="location">
+        <input type="name" class="form-control" id="name" placeholder="Enter event location" name="theater">
       </div>
     </div>
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="genre">Select Poster:</label>
-      <div class="col-sm-9">
-        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-    <small id="fileHelp" class="form-text text-muted">Select any image file from your local drive</small>
-      </div>
+
     </div>
 <br>
     <div class="form-group">        
@@ -82,6 +78,7 @@
       </div>
     </div>
 	</div>
+  </form>
   </form>
 </div>
 

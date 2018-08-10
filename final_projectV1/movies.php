@@ -102,7 +102,7 @@ $_SESSION['check']=false;
 							</div>
 						</div>
 					</div>
-					                <a href="#" class="btn btn-primary btn-lg btn-block">Movies Near You</a>
+					                <a href="listings.php" class="btn btn-primary btn-lg btn-block">Movies Near You</a>
 
 			</div>
 

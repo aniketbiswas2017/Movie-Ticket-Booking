@@ -17,9 +17,8 @@
   <a href="adminmovies.html">MOVIES</a>
   <a href="adminevents.html">EVENTS</a>
   <a href="adminsports.html">SPORTS</a>
-  <a href="admintheatres.html">THEATRES</a>
-  <a href="admindata.html">USER DATA</a>
-  <a href="adminfeed.html">USER FEEDBACK</a>
+    <a href="admindata.php">MANAGE USER PROFILES</a>
+  <a href="adminfeedback.php">USER FEEDBACK</a>
 </div>
 <h2 align = "center">Enter Movie Details</h2>
 <br>
@@ -38,7 +37,7 @@
       </div>
     </div>
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="genre">Release Date:</label>
+      <label class="control-label col-sm-2" for="genre">Show Date:</label>
       <div class="col-sm-9">
         <input class="form-control" type="date" value="2018-07-30" id="example-date-input">
       </div>
@@ -62,40 +61,28 @@
       </div>
     </div>
 	<div class="form-group">
-      <label class="control-label col-sm-2" for="genre">Show Times:</label>
+      <label class="control-label col-sm-2" for="description">Event time:</label>
       <div class="col-sm-9">
-      <select <select multiple class="form-control" id="sel2">
-      <option>10:00</option>
-      <option>14:30</option>
-      <option>16:40</option>
-      <option>18:00</option>
-      <option>21:00</option>
+    <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+  </div>
+    </div>
+
+	<div class="form-group" align="justify">
+	<label class="control-label col-sm-2" for="genre">Select Theatres:</label>
+   <div class="form-group">
+      <div class="col-sm-9">
+        <select class="form-control" id="exampleSelect1">
+      <option>Cineplex Cinemas Park Lane</option>
+      <option>KDP Kitchen Design Plus</option>
+      <option>Scotiabank Theatre Halifax</option>
+      <option>Cineplex Cinemas Dartmouth</option>
     </select>
       </div>
     </div>
-	<div class="form-group">
-      <label class="control-label col-sm-2" for="genre">Select Poster:</label>
-      <div class="col-sm-9">
-        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-    <small id="fileHelp" class="form-text text-muted">Select any image file from your local drive</small>
-      </div>
-    </div>
-	<div class="form-group" align="justify">
-	<label class="control-label col-sm-2" for="genre">Select Theatres:</label>
-   <div class="form-check form-check-inline">
-	<label class="form-check-label">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Cineplex Cinemas Park Lane
-  </label>
-	</div>
-	<div class="form-check form-check-inline">
-  <label class="form-check-label">
-    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Scotiabank Theatre Halifax
-  </label>
-</div>
 <br>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
       </div>
     </div>
 	</div>

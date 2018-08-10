@@ -48,7 +48,7 @@ session_start();
         try {
             $conn = new PDO("mysql:host=$servername;dbname=kunal; port=3306", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $stmt = $conn->prepare("SELECT email, seat, payment, rating, booking, feedback FROM Feedback");
+            $stmt = $conn->prepare("SELECT email, seat, payment, rating, booking, feedback FROM kunal.Feedback");
             $stmt->execute();
 
             while($result = $stmt->fetch())
@@ -80,8 +80,8 @@ session_start();
             }
 
         }
-        catch(PDOException $e) {
-            echo "Error: " . $e->getMessage();
+catch(PDOException $e) {
+	echo "Error: " . $e->getMessage();
         }
         $conn = null;
 

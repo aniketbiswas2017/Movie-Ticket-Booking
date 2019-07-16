@@ -29,3 +29,7 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 [26] W3 Layouts License. http://creativecommons.org/licenses/by/3.0/
 [27] W3 School Validation. https://validator.w3.org/
 [28] W3 Layouts License. http://creativecommons.org/licenses/by/3.0/
+[29] "tawk.to - "The 100% FREE live chat application for your website!"", tawk.to, 2018. [Online]. Available: https://www.tawk.to/.
+[30] PHP Mailer - https://github.com/PHPMailer
+[31] "Nicescroll jQuery Plugin – jQuery plugin for custom scrollbars on desktop and mobile browsers", Nicescroll.areaaperta.com, 2018. [Online]. Available: https://nicescroll.areaaperta.com/. [Accessed: 11- Aug- 2018].
+[32] "mhuggins/jquery-countTo", GitHub, 2018. [Online]. Available: https://github.com/mhuggins/jquery-countTo. [Accessed: 11- Aug- 2018].
